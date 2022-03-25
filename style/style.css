@@ -45,9 +45,9 @@ h1 {
     width: 23.7%;
   }
   
-  .cardBox:hover .card {
+  /* .cardBox:hover .card {
     transform: rotateY( 180deg);
-  }
+  } */
   
   .card {
     background: #222;
