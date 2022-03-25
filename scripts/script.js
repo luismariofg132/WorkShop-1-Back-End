@@ -4,9 +4,11 @@ import { characters } from "../data/data.js";
 const cards = document.querySelector(".cards");
 // Variable que contiene el número de vidas
 let vidas = 3;
+// Variable que contienen los puntos
+let puntos = 0;
 // variable que contiene el boton donde se muestra el numerod de vidas
 let vidasDom = document.getElementById("vidas");
-
+let puntosDom = document.getElementById("puntos");
 // Función que se ejecuta al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
     // Muestra en el html el numero de las vidas
@@ -53,7 +55,7 @@ document.addEventListener("click", ({ target }) => {
                     card.style.transform = 'none';
                 }, 2000);
                 validar(id);
-            }, 1000);
+            }, 500);
         }
         // Si la carta esta en la posicion de la derecha
         else {
@@ -70,11 +72,14 @@ const validar = (id) => {
         localStorage.setItem('id1', id);
     } else if (id2Ls === null) {
         localStorage.setItem('id2', id);
+        validar()
     } else {
         if (id1Ls === id2Ls) {
             Swal.fire('Ganaste', '', 'success');
             localStorage.clear();
             vidas++;
+            puntos = puntos + 2;
+            puntosDom.textContent = `Puntos: ${puntos}`;
             vidasDom.textContent = `Vidas: ${vidas}`;
         } else {
             Swal.fire('Perdiste', '', 'error');
