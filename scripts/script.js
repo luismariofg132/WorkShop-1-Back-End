@@ -81,6 +81,7 @@ const validar = (id) => {
             puntos = puntos + 2;
             puntosDom.textContent = `Puntos: ${puntos}`;
             vidasDom.textContent = `Vidas: ${vidas}`;
+            deleteCard(id1Ls);
         } else {
             Swal.fire('Perdiste', '', 'error');
             localStorage.clear();
@@ -94,4 +95,12 @@ const validar = (id) => {
             }
         }
     }
+}
+
+const deleteCard = (id, id2) => {
+    let indice1 = characters.indexOf(characters.find(item => item.id === id));
+    characters.splice(indice1, 1);
+    let indice2 = characters.indexOf(characters.find(item => item.id === id2));
+    characters.splice(indice2, 1);
+    showCards();
 }

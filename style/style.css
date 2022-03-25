@@ -5,6 +5,7 @@
 body{
     margin: 0;
     padding: 0;
+    background-image: url("https://res.cloudinary.com/ddgyxfetd/image/upload/v1648240194/Back-End/22-225252_s_gz504s.jpg");
 }
 
 header{
@@ -25,6 +26,17 @@ header button{
     background: none;
     border: none;
     cursor: pointer;
+    background-color: gold;
+    height: 30px;
+    border-radius: 10px;
+    color: white
+}
+
+header nav li{
+  text-transform: capitalize;
+  font-weight: bold;
+  display: inline;
+  padding: 0 3px;
 }
 
 h1 {
