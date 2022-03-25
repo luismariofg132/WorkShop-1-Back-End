@@ -1,7 +1,7 @@
 export const characters = [
     {
         "id": 1,
-        "id2": 1,
+        "id2": 12,
         "name": "Rick Sanchez",
         "status": "Alive",
         "species": "Human",
@@ -21,7 +21,7 @@ export const characters = [
     },
     {
         "id": 2,
-        "id2": 2,
+        "id2": 13,
         "name": "Morty Smith",
         "status": "Alive",
         "species": "Human",
@@ -41,7 +41,7 @@ export const characters = [
     },
     {
         "id": 3,
-        "id2": 3,
+        "id2": 14,
         "name": "Summer Smith",
         "status": "Alive",
         "species": "Human",
@@ -61,7 +61,7 @@ export const characters = [
     },
     {
         "id": 4,
-        "id2": 4,
+        "id2": 15,
         "name": "Beth Smith",
         "status": "Alive",
         "species": "Human",
@@ -81,7 +81,7 @@ export const characters = [
     },
     {
         "id": 5,
-        "id2": 5,
+        "id2": 16,
         "name": "Jerry Smith",
         "status": "Alive",
         "species": "Human",
@@ -101,7 +101,7 @@ export const characters = [
     },
     {
         "id": 6,
-        "id2": 6,
+        "id2": 17,
         "name": "Abadango Cluster Princess",
         "status": "Alive",
         "species": "Alien",
@@ -121,7 +121,7 @@ export const characters = [
     },
     {
         "id": 1,
-        "id2": 7,
+        "id2": 18,
         "name": "Rick Sanchez",
         "status": "Alive",
         "species": "Human",
@@ -141,7 +141,7 @@ export const characters = [
     },
     {
         "id": 2,
-        "id2": 8,
+        "id2": 19,
         "name": "Morty Smith",
         "status": "Alive",
         "species": "Human",
@@ -161,7 +161,7 @@ export const characters = [
     },
     {
         "id": 3,
-        "id2": 9,
+        "id2": 20,
         "name": "Summer Smith",
         "status": "Alive",
         "species": "Human",
@@ -181,7 +181,7 @@ export const characters = [
     },
     {
         "id": 4,
-        "id2": 10,
+        "id2": 21,
         "name": "Beth Smith",
         "status": "Alive",
         "species": "Human",
@@ -201,7 +201,7 @@ export const characters = [
     },
     {
         "id": 5,
-        "id2": 11,
+        "id2": 22,
         "name": "Jerry Smith",
         "status": "Alive",
         "species": "Human",
@@ -221,7 +221,7 @@ export const characters = [
     },
     {
         "id": 6,
-        "id2": 12,
+        "id2": 23,
         "name": "Abadango Cluster Princess",
         "status": "Alive",
         "species": "Alien",
