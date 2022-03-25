@@ -1,16 +1,26 @@
+// Importa el archivo de la base de datos
 import { characters } from "../data/data.js";
+// Seleccionamos los elementos del html
 const cards = document.querySelector(".cards");
+// Variable que contiene el número de vidas
 let vidas = 3;
+// variable que contiene el boton donde se muestra el numerod de vidas
 let vidasDom = document.getElementById("vidas");
 
+// Función que se ejecuta al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
+    // Muestra en el html el numero de las vidas
     vidasDom.textContent = `Vidas: ${vidas}`;
+    // Llama a la función que muestra las cartas
     showCards();
 })
 
+// Función que muestra las cartas
 const showCards = () => {
     cards.innerHTML = '';
+    // Desorneda el array de personajes
     characters.sort(() => Math.random() - 0.5);
+    // Recorre el array de personajes
     characters.forEach(item => {
         cards.innerHTML += `
         <div class="cardBox">
@@ -27,23 +37,32 @@ const showCards = () => {
     })
 }
 
+// Evento que se ejecuta al hacer click en una carta
 document.addEventListener("click", ({ target }) => {
+    // Si el elemento clickeado es una carta
     if (target.classList.contains('carta')) {
         let id = target.id;
         let id2 = target.alt;
         let card = document.getElementById(`${id2}`);
         let styleCard = window.getComputedStyle(card);
+        // Si la carta esta en la posicion de la izquierda
         if (styleCard.transform === "none") {
             card.style.transform = 'rotateY(180deg)';
             setTimeout(() => {
+                setTimeout(() => {
+                    card.style.transform = 'none';
+                }, 2000);
                 validar(id);
             }, 1000);
-        } else {
+        }
+        // Si la carta esta en la posicion de la derecha
+        else {
             card.style.transform = 'none';
         }
     }
 })
 
+// Función que valida si la carta es correcta
 const validar = (id) => {
     let id1Ls = localStorage.getItem('id1');
     let id2Ls = localStorage.getItem('id2');
